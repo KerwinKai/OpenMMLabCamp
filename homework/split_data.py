@@ -33,8 +33,9 @@ def copy_dataset(src_img_list, data_index, target_path):
         img_name = os.path.split(src_img)[-1]
 
         shutil.copy(src_img, target_path)
-        target_img_list.append(img_name)
-        # target_img_list.append(os.path.join(target_path, img_name))
+        #target_img_list.append(img_name)
+        #target_path = target_path.split('/')[-1]
+        target_img_list.append(os.path.join(target_path, img_name))
 
     return target_img_list
 
