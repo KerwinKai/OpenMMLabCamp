@@ -7,6 +7,8 @@ source activate opennmmlab_mmclassification
 export PYTHONUNBUFFERED=1
 export PATH_MMCLS="/HOME/scz0b6e/OpenMMLabCamp/mmclassification"
 export PATH_WORK1_BASE="/HOME/scz0b6e/OpenMMLabCamp/homework/work1_base"
+cd $PATH_WORK1_BASE
+mkdir resnet18_b32_flower
 N_GPUS=8
 python -m torch.distributed.launch \
         --nproc_per_node=${N_GPUS} \
