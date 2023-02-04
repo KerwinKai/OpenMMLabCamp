@@ -1,3 +1,0 @@
-[submodule "mmclassification"]
-	path = mmclassification
-	url = https://github.com/open-mmlab/mmclassification.git
