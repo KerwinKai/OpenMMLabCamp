@@ -60,12 +60,12 @@ data = dict(
             dict(type='ToTensor', keys=['gt_label']),
             dict(type='Collect', keys=['img', 'gt_label'])
         ],
-        ann_file='data/flower_data/train.txt',
-        classes='data/flower_data/classes.txt'),
+        ann_file='/HOME/scz0b6e/run/flower_dataset_split/train.txt',
+        classes='/HOME/scz0b6e/run/flower_dataset_split/classes.txt'),
     val=dict(
         type='ImageNet',
         data_prefix='',
-        ann_file='data/flower_data/val.txt',
+        ann_file='/HOME/scz0b6e/run/flower_dataset_split/val.txt',
         pipeline=[
             dict(type='LoadImageFromFile'),
             dict(type='Resize', size=(256, -1)),
@@ -78,11 +78,11 @@ data = dict(
             dict(type='ImageToTensor', keys=['img']),
             dict(type='Collect', keys=['img'])
         ],
-        classes='data/flower_data/classes.txt'),
+        classes='/HOME/scz0b6e/run/flower_dataset_split/classes.txt'),
     test=dict(
         type='ImageNet',
-        data_prefix='data/imagenet/val',
-        ann_file='data/imagenet/meta/val.txt',
+        data_prefix='/HOME/scz0b6e/run/flower_dataset_split/val',
+        ann_file='/HOME/scz0b6e/run/flower_dataset_split/val.txt',
         pipeline=[
             dict(type='LoadImageFromFile'),
             dict(type='Resize', size=(256, -1)),
@@ -101,7 +101,7 @@ checkpoint_config = dict(interval=1)
 log_config = dict(interval=100, hooks=[dict(type='TextLoggerHook')])
 dist_params = dict(backend='nccl')
 log_level = 'INFO'
-load_from = 'checkpoints/resnet18_batch256_imagenet_20200708-34ab8f90.pth'
+load_from = '/HOME/scz0b6e/run/checkpoints/resnet18_batch256_imagenet_20200708-34ab8f90.pth'
 resume_from = None
 workflow = [('train', 1)]
 optimizer = dict(type='SGD', lr=0.001, momentum=0.9, weight_decay=0.0001)
