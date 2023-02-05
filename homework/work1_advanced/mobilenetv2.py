@@ -88,7 +88,7 @@ evaluation = dict(
 optimizer = dict(type='SGD', lr=0.0008, momentum=0.75, weight_decay=4e-05)
 optimizer_config = dict(grad_clip=None)
 lr_config = dict(policy='step', gamma=0.98, step=1)
-runner = dict(type='EpochBasedRunner', max_epochs=30)
+runner = dict(type='EpochBasedRunner', max_epochs=50)
 checkpoint_config = dict(interval=5)
 log_config = dict(interval=10, hooks=[dict(type='TextLoggerHook')])
 dist_params = dict(backend='nccl')
