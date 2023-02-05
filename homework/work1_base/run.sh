@@ -11,5 +11,5 @@ cd $PATH_WORK1_BASE
 mkdir resnet18_b32_flower
 
 python "$PATH_MMCLS"/tools/train.py \
-        "$PATH_WORK1_BASE"/resnet18_b32_flower.py \
+        "$PATH_WORK1_BASE"/resnet_b32_flower.py \
         --work-dir resnet18_b32_flower
