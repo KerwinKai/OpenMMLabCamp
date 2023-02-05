@@ -94,4 +94,4 @@ load_from = '/HOME/scz0b6e/run/checkpoints/resnet50_b16x8_cifar10_20210528-f54bf
 resume_from = None
 workflow = [('train', 1)]
 work_dir = 'resnet50_cifar10'
-gpu_ids = [0]
+gpu_ids = [0, 1, 2, 3]
