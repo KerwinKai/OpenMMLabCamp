@@ -46,7 +46,7 @@ data = dict(
     workers_per_gpu=2,
     train=dict(
         type='ImageNet',
-        data_prefix='',
+        data_prefix='/HOME/scz0b6e/run/flower_dataset_split/train',
         pipeline=[
             dict(type='LoadImageFromFile'),
             dict(type='RandomResizedCrop', size=224),
@@ -64,7 +64,7 @@ data = dict(
         classes='/HOME/scz0b6e/run/flower_dataset_split/classes.txt'),
     val=dict(
         type='ImageNet',
-        data_prefix='',
+        data_prefix='/HOME/scz0b6e/run/flower_dataset_split/val',
         ann_file='/HOME/scz0b6e/run/flower_dataset_split/val.txt',
         pipeline=[
             dict(type='LoadImageFromFile'),
