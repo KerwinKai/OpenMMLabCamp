@@ -40,7 +40,9 @@ def write_file(data, file_name):
         write_data =[]
         for lab, img_list in data.items():
             for img in img_list:
-                write_data.append("{} {} ".format(img, lab))
+                img_path = "{} {} ".format(img, lab)
+                img_path = img_path[img_path.find('/', img_path.find('/')+1)+1:]
+                write_data.append(img_path)
     else:
         write_data = data
 
