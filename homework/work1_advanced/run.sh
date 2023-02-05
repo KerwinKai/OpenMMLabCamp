@@ -8,7 +8,7 @@ export PYTHONUNBUFFERED=1
 export PATH_MMCLS="/HOME/scz0b6e/mmclassification"
 export PATH_WORK1_ADVANCED="/HOME/scz0b6e/OpenMMLabCamp/homework/work1_advanced"
 cd $PATH_WORK1_ADVANCED
-mkdir mobilenet-v2_cifar10
+mkdir resnet50_cifar10
 python "$PATH_MMCLS"/tools/train.py \
-        "$PATH_WORK1_ADVANCED"/mobilenetv2.py \
-        --work-dir "$PATH_WORK1_ADVANCED"/mobilenet-v2_cifar10
+        "$PATH_WORK1_ADVANCED"/resnet50.py \
+        --work-dir "$PATH_WORK1_ADVANCED"/resnet50_cifar10
